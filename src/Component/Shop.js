@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import { dataAdd } from "../Redux/ReduxAction/reduxaction";
 
 const Shop = (props) => {
-  console.log(props.product.products);
-  const iteam = props.product.products;
+  console.log(props.product?.products);
+  const iteam = props.product?.products;
   const { dataAdd } = props;
 
   useEffect(() => {
@@ -15,7 +15,7 @@ const Shop = (props) => {
   }, []);
   return (
     <div>
-      <h3>product{iteam.length}</h3>
+      <h3>product{iteam?.length}</h3>
       {/* <button onClick={() => dataAdd("hi")}> add</button> */}
     </div>
   );
