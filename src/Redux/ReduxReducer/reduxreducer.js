@@ -6,9 +6,12 @@ const initialState = {
 const cartreducer = (state = initialState, action) => {
   switch (action.type) {
     case Data_Add:
-      console.log(state.product);
+      console.log(action.products);
+      const products = action.products;
+      const addproduct = { ...state.product, products };
       return {
-        product: state.product,
+        ...state,
+        product: addproduct,
       };
 
     default:
